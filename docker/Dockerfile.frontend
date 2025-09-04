@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 ARG DB_URL
 
+ENV DATABASE_URL=$DB_URL
+
 COPY ./packages ./packages
 
 COPY ./apps/web ./apps/web
