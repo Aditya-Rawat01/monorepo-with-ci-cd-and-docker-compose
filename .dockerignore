@@ -1,0 +1,6 @@
+node_modules
+.gitignore
+Dockerfile.backend
+Dockerfile.frontend
+Dockerfile.ws
+README.md
