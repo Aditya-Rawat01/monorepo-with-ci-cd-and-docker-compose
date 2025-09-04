@@ -6,6 +6,8 @@ ARG DB_URL
 
 ENV DATABASE_URL=$DB_URL
 
+RUN echo "The value received for DB_URL is: >>>${DB_URL}<<<"
+
 COPY ./packages ./packages
 
 COPY ./apps/web ./apps/web
@@ -20,7 +22,7 @@ RUN bun i
 
 RUN bun run generate:db
 
-RUN DATABASE_URL=${DB_URL} bun turbo run build
+RUN bun turbo run build
 
 EXPOSE 3000
 
