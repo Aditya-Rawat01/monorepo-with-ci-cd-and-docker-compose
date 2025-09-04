@@ -20,7 +20,7 @@ RUN bun i
 
 RUN bun run generate:db
 
-RUN DB_URL=${DB_URL} bun turbo run build
+RUN DATABASE_URL=${DB_URL} bun turbo run build
 
 EXPOSE 3000
 
